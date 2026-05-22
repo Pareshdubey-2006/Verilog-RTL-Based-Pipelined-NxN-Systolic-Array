@@ -47,10 +47,10 @@ Distributed Accumulation
 Output Results
 ```
 
-![High Level Architecture](docs/High Level Architecture.png)
+![High Level Architecture](docs/High_Level_Architecture.png)
 
 
-![NxN systolic array](docs/NxN Systolic Architecture.png)
+![NxN Systolic Array](docs/NxN_Systolic_Architecture.png)
 
 
 
@@ -150,11 +150,11 @@ out[1][1] = 27
 
 ### Accumulation Flow Verification
 
-![Accumulation Flow](waveforms/Accumulation flow.png)
+![Accumulation Flow](waveforms/Accumulation_flow.png)
 
 ### PE Dataflow Verification
 
-![PE Dataflow](waveforms/PE Dataflow.png)
+![PE Dataflow](waveforms/PE_Dataflow.png)
 
 
 
