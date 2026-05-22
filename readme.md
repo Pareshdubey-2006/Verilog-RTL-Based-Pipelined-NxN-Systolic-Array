@@ -47,10 +47,10 @@ Distributed Accumulation
 Output Results
 ```
 
-![High Level Architecture](docs/High_Level_Architecture.png)
+![High Level Architecture](docs/High Level Architecture.png)
 
 
-![NxN Systolic Array](docs/NxN_Systolic_Architecture.png)
+![NxN systolic array](docs/NxN Systolic Architecture.png)
 
 
 
