@@ -1,8 +1,8 @@
-# Verilog RTL Based Pipelined 2D Systolic Array AI Accelerator
+# Verilog RTL Based Pipelined NxN Systolic Array AI Accelerator
 
 ## Overview
 
-This project is a Verilog-based hardware accelerator designed using a 2D systolic array architecture. The system performs matrix-style multiply-accumulate (MAC) operations using interconnected Processing Elements (PEs), pipelined computation, and FSM-based control logic.
+This project is a Verilog-based hardware accelerator designed using a parameterized NxN systolic array architecture. The system performs matrix-style multiply-accumulate (MAC) operations using interconnected Processing Elements (PEs), pipelined computation, and FSM-based control logic.
 
 The project demonstrates important frontend VLSI concepts such as:
 - RTL design
@@ -33,7 +33,7 @@ The architecture is inspired by modern AI accelerator concepts used in tensor pr
 
 ## Project Flow
 
-
+```text
 Input Matrix Elements
         ↓
 FSM Controller
@@ -45,12 +45,12 @@ Pipelined MAC Engine
 Distributed Accumulation
         ↓
 Output Results
-
+```
 
 ![High Level Architecture](docs/High_Level_Architecture.png)
 
 
-![Systolic Array Architecture](docs/Systolic_Array_Architecture.png)
+![NxN Systolic Array](docs/NxN_Systolic_Architecture.png)
 
 
 
@@ -60,6 +60,7 @@ Each Processing Element performs:
 
 1. Multiply-Accumulate (MAC) operation
 2. Data forwarding to neighboring PEs
+3. Partial sum accumulation
 
 MAC operation:
 
@@ -73,10 +74,12 @@ The PE also forwards input data horizontally and vertically through the systolic
 - Verilog HDL
 - Icarus Verilog
 - GTKWave
+- SystemVerilog Generate Loops
 
 
 ## Folder Structure
 
+```text
 project/
 │
 ├── rtl/
@@ -101,7 +104,7 @@ project/
 │   └── Systolic_Array_Architecture.png
 │
 └── README.md
-
+```
 
 ## Simulation and Verification
 
@@ -122,20 +125,38 @@ Waveforms were used to verify:
 
 ## Example Outputs
 
-For sample inputs:
+### Sample Inputs
 
-a0 = 2
-a1 = 3
+```text
+a_in[0] = 2
+a_in[1] = 3
 
-b0 = 4
-b1 = 5
+b_in[0] = 4
+b_in[1] = 5
+```
 
-Outputs obtained:
+### Outputs Obtained
 
-out00 = 8
-out01 = 18
-out10 = 12
-out11 = 27
+```text
+out[0][0] = 8
+out[0][1] = 18
+
+out[1][0] = 12
+out[1][1] = 27
+```
+
+
+## Waveform Results
+
+### Accumulation Flow Verification
+
+![Accumulation Flow](waveforms/Accumulation flow.png)
+
+### PE Dataflow Verification
+
+![PE Dataflow](waveforms/PE Dataflow.png)
+
+
 
 ## Future Improvements
 
@@ -150,3 +171,4 @@ Possible future upgrades:
 ## Conclusion
 
 This project demonstrates the implementation of a parameterized scalable NxN AI-oriented accelerator architecture using Verilog RTL. It combines pipelined MAC computation, scalable Processing Element (PE) mesh architecture, and systolic-array-based distributed processing to perform efficient matrix-style operations in hardware.
+
