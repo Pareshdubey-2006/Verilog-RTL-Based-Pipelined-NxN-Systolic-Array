@@ -1,0 +1,54 @@
+$date
+	Tue May 19 23:58:11 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mac_tb $end
+$var wire 16 ! result [15:0] $end
+$var reg 8 " a [7:0] $end
+$var reg 16 # acc_in [15:0] $end
+$var reg 8 $ b [7:0] $end
+$var reg 1 % clk $end
+$scope module uut $end
+$var wire 8 & a [7:0] $end
+$var wire 16 ' acc_in [15:0] $end
+$var wire 8 ( b [7:0] $end
+$var wire 1 % clk $end
+$var reg 16 ) result [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx )
+b100 (
+b101 '
+b11 &
+0%
+b100 $
+b101 #
+b11 "
+bx !
+$end
+#5000
+b10001 !
+b10001 )
+1%
+#10000
+0%
+b10001 #
+b10001 '
+b101 $
+b101 (
+b10 "
+b10 &
+#15000
+b11011 !
+b11011 )
+1%
+#20000
+0%
